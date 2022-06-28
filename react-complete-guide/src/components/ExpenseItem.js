@@ -1,13 +1,15 @@
+import "./ExpenseItem.css";
+
 // This hold the expense item components
 
 //Creating a component
 function ExpenseItem() {
   return (
-    <div>
+    <div className="expense-item">
       <div>June 20th 2022</div>
-      <div>
+      <div className="expense-item__description">
         <h2>Car Insurance</h2>
-        <div>$294.67</div>
+        <div className="expense-item__price">$294.67</div>
       </div>
     </div>
   );
