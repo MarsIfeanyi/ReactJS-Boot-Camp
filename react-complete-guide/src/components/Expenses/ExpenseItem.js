@@ -4,7 +4,7 @@ import ExpenseDate from "./ExpenseDate";
 
 import Card from "../UI/Card";
 
-//Creating a component
+//Creating a component, using arrow function
 const ExpenseItem = (props) => {
   //   return (
 
