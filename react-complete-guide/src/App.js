@@ -1,13 +1,7 @@
-// import ExpenseItem from "./components/ExpenseItem";
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 
-function App() {
-  //Creating the paragraph element using regular JS
-
-  // const para = document.createElement("p");
-  // para.textContent = "Front-End Engineer";
-  // document.getElementById("root").append(para);
-
+//Using arrow function
+const App = () => {
   const expenses = [
     {
       id: "e1",
@@ -33,12 +27,10 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
-      {/* <p>Front-End Engineer</p> */}
 
       <Expenses item={expenses}></Expenses>
-    </div> //Desired target state
+    </div>
   );
-  //This is JSX and not pure html...JSX is HTML code inside of JS
-}
+};
 
 export default App;
