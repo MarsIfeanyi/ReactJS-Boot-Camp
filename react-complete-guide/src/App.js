@@ -1,5 +1,5 @@
 // import ExpenseItem from "./components/ExpenseItem";
-import ExpenseItemData from "./components/ExpenseItemData";
+import Expenses from "./components/Expenses";
 
 function App() {
   //Creating the paragraph element using regular JS
@@ -35,7 +35,7 @@ function App() {
       <h2>Let's get started!</h2>
       {/* <p>Front-End Engineer</p> */}
 
-      <ExpenseItemData item={expenses}></ExpenseItemData>
+      <Expenses item={expenses}></Expenses>
     </div> //Desired target state
   );
   //This is JSX and not pure html...JSX is HTML code inside of JS
