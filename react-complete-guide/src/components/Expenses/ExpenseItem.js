@@ -1,24 +1,15 @@
+import React, { useState } from "react";
 import "./ExpenseItem.css";
-
 import ExpenseDate from "./ExpenseDate";
-
 import Card from "../UI/Card";
 
 //Creating a component, using arrow function
 const ExpenseItem = (props) => {
-  //   return (
-
-  // Hardcoded Data
-
-  //     <div className="expense-item">
-  //       <div>June 20th 2022</div>
-  //       <div className="expense-item__description">
-  //         <h2>Car Insurance</h2>
-  //         <div className="expense-item__price">$294.67</div>
-  //       </div>
-  //     </div>
-  //   );
-
+  const [title, setTitle] = useState(props.title);
+  const clickHandler = () => {
+    setTitle("Updated!!!");
+    console.log(title);
+  };
   //Dynamic Data
 
   return (
@@ -26,9 +17,12 @@ const ExpenseItem = (props) => {
       <ExpenseDate date={props.date}></ExpenseDate>
 
       <div className="expense-item__description">
-        <h2>{props.title}</h2>
+        <h2>{title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
+
+      {/* Here we just point at the function and not call the function */}
+      <button onClick={clickHandler}>Change Title </button>
     </Card> //Using Card components as a wrapper
   );
 }; //Here we return the HTML code, the JSX code which should be brought onto the screen by the component
