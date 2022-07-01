@@ -1,10 +1,25 @@
+import React, { useState } from "react";
+
 import ExpenseItem from "./ExpenseItem";
-import "./Expenses";
+import "./Expenses.css";
 import Card from "../UI/Card";
+import ExpensesFilter from "./ExpensesFilter";
 
 function Expenses(props) {
+  const [filterYear, setFilterYear] = useState("2020");
+
+  const filterChangeHandler = (selectedYear) => {
+    setFilterYear(selectedYear);
+  };
+  //selected={filterYear} is for Two way Binding
+
   return (
     <Card className="expenses">
+      <ExpensesFilter
+        selected={filterYear}
+        onChangeFilter={filterChangeHandler}
+      ></ExpensesFilter>
+
       <ExpenseItem
         title={props.items[0].title}
         date={props.items[0].date}
