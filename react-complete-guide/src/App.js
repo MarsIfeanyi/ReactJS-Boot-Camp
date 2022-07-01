@@ -30,6 +30,7 @@ const App = () => {
     console.log("expense");
   };
 
+  // JSX Code
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
