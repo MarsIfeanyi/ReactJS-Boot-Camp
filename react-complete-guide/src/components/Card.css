@@ -1,7 +1,0 @@
-/* Hint: We created the Card.js and Card.css to build component wrappers and remove duplicate styles
- */
-
-.card {
-  border-radius: 12px;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
-}
