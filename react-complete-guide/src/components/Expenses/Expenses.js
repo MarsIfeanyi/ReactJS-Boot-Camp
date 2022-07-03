@@ -20,7 +20,19 @@ function Expenses(props) {
         onChangeFilter={filterChangeHandler}
       ></ExpensesFilter>
 
-      <ExpenseItem
+      {/* Rendering List of Data using Map...Dynamic Rendering */}
+
+      {props.items.map((expense) => (
+        <ExpenseItem
+          title={expense.title}
+          amount={expense.amount}
+          date={expense.date}
+        ></ExpenseItem>
+      ))}
+
+      {/* Manual or Hardcoded Rendering */}
+
+      {/* <ExpenseItem
         title={props.items[0].title}
         date={props.items[0].date}
         amount={props.items[0].amount}
@@ -40,7 +52,7 @@ function Expenses(props) {
         title={props.items[3].title}
         date={props.items[3].date}
         amount={props.items[3].amount}
-      ></ExpenseItem>
+      ></ExpenseItem> */}
     </Card>
   );
 }
