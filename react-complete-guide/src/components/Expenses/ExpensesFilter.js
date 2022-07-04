@@ -23,3 +23,5 @@ const ExpensesFilter = (props) => {
 };
 
 export default ExpensesFilter;
+
+//Hint: ExpensesFilter.js is a controlled component, it is controlled by Expenses.js
