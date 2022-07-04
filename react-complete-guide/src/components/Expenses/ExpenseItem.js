@@ -1,8 +1,8 @@
 import React from "react";
+
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
-import ExpensesFilter from "./ExpensesFilter";
 
 //Creating a component, using arrow function
 const ExpenseItem = (props) => {
@@ -15,8 +15,6 @@ const ExpenseItem = (props) => {
 
   return (
     <div>
-      <ExpensesFilter></ExpensesFilter>
-
       <Card className="expense-item">
         <ExpenseDate date={props.date}></ExpenseDate>
 
