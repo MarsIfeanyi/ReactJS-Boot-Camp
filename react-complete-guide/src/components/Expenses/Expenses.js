@@ -11,6 +11,12 @@ function Expenses(props) {
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
+
+  //Filtering the expense
+  const filteredExpenses = props.items.filter((expense) => {
+    return expense.date.getFullYear().toString === filteredYear;
+  }); //The filter method returns a brand new array, but the original array is not touched or transformed. you pass a function to it, and if true a certain item is kept, else it is not kept
+
   //selected={filterYear} is for Two way Binding
 
   return (
@@ -23,7 +29,7 @@ function Expenses(props) {
 
         {/* Rendering List of Data using Map...Dynamic Rendering and Adding the key prop */}
 
-        {props.items.map((expense) => (
+        {filteredExpenses.map((expense) => (
           <ExpenseItem
             key={expense.id}
             title={expense.title}
