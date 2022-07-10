@@ -19,6 +19,20 @@ function Expenses(props) {
 
   //selected={filterYear} is for Two way Binding
 
+  //Rendering/Outputting Conditional Content
+  let expensesContent = <p>No expense found.</p>;
+
+  if (filteredExpenses.length > 0) {
+    expensesContent = filteredExpenses.map((expense) => (
+      <ExpenseItem
+        key={expense.id}
+        title={expense.title}
+        amount={expense.amount}
+        date={expense.date}
+      ></ExpenseItem>
+    ));
+  }
+
   return (
     <div>
       <Card className="expenses">
@@ -27,19 +41,52 @@ function Expenses(props) {
           onChangeFilter={filterChangeHandler}
         ></ExpensesFilter>
 
-        {/* Rendering List of Data using Map...Dynamic Rendering and Adding the key prop */}
-
-        {filteredExpenses.map((expense) => (
-          <ExpenseItem
-            key={expense.id}
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}
-          ></ExpenseItem>
-        ))}
+        {expensesContent}
       </Card>
     </div>
   );
 }
 
 export default Expenses;
+
+/**
+ * 
+ * Using Ternary Operator for Rendering/Outputting conditional content 
+
+        {/* {filteredExpenses.length === 0 ? (
+          <p>No expense found.</p>
+        ) : (
+          filteredExpenses.map((expense) => (
+            <ExpenseItem
+              key={expense.id}
+              title={expense.title}
+              amount={expense.amount}
+              date={expense.date}
+            ></ExpenseItem>
+          ))
+        )} 
+
+         The part after && is rendered if the part before && returns true 
+
+         {filteredExpenses.length === 0 && <p>No expense found.</p>}
+        {filteredExpenses.length > 0 &&
+          filteredExpenses.map((expense) => (
+            <ExpenseItem
+              key={expense.id}
+              title={expense.title}
+              amount={expense.amount}
+              date={expense.date}
+            ></ExpenseItem>
+          ))} 
+
+         Rendering List of Data using Map...Dynamic Rendering and Adding the key prop 
+
+         {filteredExpenses.map((expense) => (
+          <ExpenseItem
+            key={expense.id}
+            title={expense.title}
+            amount={expense.amount}
+            date={expense.date}
+          ></ExpenseItem>
+        ))} 
+ */
