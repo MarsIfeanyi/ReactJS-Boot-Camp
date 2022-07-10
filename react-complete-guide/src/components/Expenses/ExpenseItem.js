@@ -14,7 +14,7 @@ const ExpenseItem = (props) => {
   //Dynamic Data
 
   return (
-    <div>
+    <li>
       <Card className="expense-item">
         <ExpenseDate date={props.date}></ExpenseDate>
 
@@ -26,7 +26,7 @@ const ExpenseItem = (props) => {
         {/* Here we just point at the function and not call the function */}
         {/* <button onClick={clickHandler}>Change Title </button> */}
       </Card>
-    </div>
+    </li>
   );
 }; //Here we return the HTML code, the JSX code which should be brought onto the screen by the component
 
