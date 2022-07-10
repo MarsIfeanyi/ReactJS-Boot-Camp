@@ -1,6 +1,6 @@
 /**
  * The map method creates a new array based on another array and it transforms every element in the original array.
- * The map method takes a function which pass as an argument and then every item in the array which we are calling map.
+ * The map method takes a function which is passed as an argument and then executes every item in the array which we are calling map.
  * Map takes a function as an argument and that function executes for every element in the array and it gets that element for which it is currently executing as a parameter.
  */
 
@@ -32,7 +32,8 @@ function Expenses(props) {
         onChangeFilter={filterChangeHandler}
       ></ExpensesFilter>
 
-      {/* Rendering List of Data using Map...Dynamic Rendering */}
+      {/* Rendering List of Data Dynamically using Map...Dynamic Rendering.
+      Hint: Notice that we are using the parameter we passed into the map ie 'expense' for the dot notation ie 'expense.title... */}
 
       {props.items.map((expense) => (
         <ExpenseItem
