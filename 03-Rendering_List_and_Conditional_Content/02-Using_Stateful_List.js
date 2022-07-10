@@ -22,7 +22,7 @@ const DUMMY_EXPENSES = [
     amount: 450,
     date: new Date(2021, 5, 12),
   },
-];
+]; //Hint: This is just Dummy data that we use to initialize our State... ie it is an initial state value
 
 //Using arrow function
 const App = () => {
