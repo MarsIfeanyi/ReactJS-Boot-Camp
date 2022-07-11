@@ -29,23 +29,34 @@ const CourseInput = (props) => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <div className="form-control">
-        {/* Setting Dynamic inline styles...Hint we pass in an object{} into the style prop. 
-        
-        style={{ color: !isValid ? "red" : "black"*/}
-        <label style={{ color: !isValid ? "red" : "black" }}>Course Goal</label>
-        <input
-          style={{
-            borderColor: !isValid ? "red" : "#ccc",
-            background: !isValid ? "salmon" : "transparent",
-          }}
-          type="text"
-          onChange={goalInputChangeHandler}
-        />
+      {/* Setting CSS Classes Dynamically */}
+      <div className={`form-control ${!isValid ? "invalid" : " "}`}>
+        <label>Course Goal</label>
+        <input type="text" onChange={goalInputChangeHandler} />
       </div>
       <Button type="submit">Add Goal</Button>
     </form>
   );
+
+  // return (
+  //   <form onSubmit={formSubmitHandler}>
+  //     <div className="form-control">
+  //       {/* Setting Dynamic inline styles...Hint we pass in an object{} into the style prop.
+
+  //       style={{ color: !isValid ? "red" : "black"*/}
+  //       <label style={{ color: !isValid ? "red" : "black" }}>Course Goal</label>
+  //       <input
+  //         style={{
+  //           borderColor: !isValid ? "red" : "#ccc",
+  //           background: !isValid ? "salmon" : "transparent",
+  //         }}
+  //         type="text"
+  //         onChange={goalInputChangeHandler}
+  //       />
+  //     </div>
+  //     <Button type="submit">Add Goal</Button>
+  //   </form>
+  // );
 };
 
 export default CourseInput;
