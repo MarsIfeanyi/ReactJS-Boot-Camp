@@ -50,7 +50,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     }; //Make sure that the property names exist and hold the correct value
     // console.log(expenseData);
