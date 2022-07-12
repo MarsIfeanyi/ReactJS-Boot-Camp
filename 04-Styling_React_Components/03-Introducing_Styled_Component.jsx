@@ -10,7 +10,7 @@ import styled from "styled-components";
 //import './Button.css';
 
 /**
-  * Using style component... styled.button`` is attacked template literal. button is a method on the styled component object. What we passed into the backticks will end up in the button method and the button method will return a new button component.
+  * Using style component... styled.button`` is a tagged template literal. button is a method on the styled component object. What we passed into the backticks will end up in the button method and the button method will return a new button component.
   * Hint: The styled package has method for all HTML elements
   * For psuedo selectors we use the ampersand symbol 
  
