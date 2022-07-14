@@ -1,11 +1,13 @@
 /**
  * Extracted from App.js
+ * const App=()=>{
  * return (
     <div>
       <h2>Let's get started!</h2>
 
       <Expenses item={expenses}></Expenses>
-    </div>
+    </div>)
+ * }
 
  */
 
