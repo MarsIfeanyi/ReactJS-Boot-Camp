@@ -12,6 +12,11 @@
  * React allows you to create re-usable and reactive components consisting of HTML and JS(and CSS).
  * React uses a declarative approach for building components ie you define the desired target state(s) and let React figure out the actual JS DOM instructions
  *
- *Hint: Component is a JavaScript function which typically returns HTML(JSX) code that should be displayed
- *
+ *Hint: Component is a JavaScript function which typically returns HTML(JSX) code that should be displayed ie the JSX Code contains the React Elements.
+ 
+ Elements are the smallest building blocks of React apps.
+An element describes what you want to see on the screen
+
+Hint: Always start component name with capital letters, React treats components starting with lowercase letters as DOM tags
+
  */
