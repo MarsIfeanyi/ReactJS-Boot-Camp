@@ -78,13 +78,21 @@ const ExpenseForm = () => {
 export default ExpenseForm;
 
 /**
- * Hint: Whenever you update your state and you depend on the previous state, should not do it like this but rather use an alternative form of the state updating function. ie by calling the updating function and pass another function into it. Doing it like this ensures that React gives you the latest state snapshot, keeping all scheduled state updates in mind. This is the safest way to ensure that you operate on the latest state snapshot
+ * Hint: Whenever you update your state and you depend on the previous state, should not do it like this (as in above) but rather use an alternative form of the state updating function. ie by calling the updating function and pass another function into it. Doing it like this ensures that React gives you the latest state snapshot, keeping all scheduled state updates in mind. This is the safest way to ensure that you operate on the latest state snapshot
  */
 
+//Updating  State that depend on the previous state using arrow function
 const titleChangeHandler = (event) => {
   setUserInput((prevState) => {
     return { ...prevState, enteredTitle: event.target.value };
   });
-};
+}; //Here the state is updated using the function's snapshot
 
 //Hint: You should always use the function snapshot whenever your state update depends on the previous state.
+
+//Updating  State that depend on the previous state using function expression
+const titleChangeHandler2 = function (event) {
+  setUserInput(function (prevState) {
+    return { ...prevState, enteredTitle: event.target.value };
+  });
+};
