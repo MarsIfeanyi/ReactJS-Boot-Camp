@@ -1,3 +1,7 @@
+/**
+ *  Hint: You can choose any of the ways you like working with for Multiple states
+ */
+
 import React, { useState } from "react";
 
 import "./ExpenseForm.css";
@@ -46,7 +50,7 @@ const ExpenseForm = () => {
   };
 
   const submitHandler = (event) => {
-    event.preventDefault(); //Prevents the submission of form on page reload.This is default behavior of JS
+    event.preventDefault(); //Prevents the submission of form on page reload.This is default behavior of JS. by default JS will submit the form each time that the page re-loads. thus to prevent it we call event.preventDefault();
 
     const expenseData = {
       title: enteredTitle,
