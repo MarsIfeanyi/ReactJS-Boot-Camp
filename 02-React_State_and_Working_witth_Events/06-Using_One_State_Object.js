@@ -12,14 +12,14 @@ const ExpenseForm = () => {
     enteredTitle: "",
     enteredAmount: "",
     enteredDate: "",
-  });
+  }); //Note, here the useState accepts an Object as an initial input
 
   const titleChangeHandler = (event) => {
     // setEnteredTitle(event.target.value);
     setUserInput({
       ...userInput,
       enteredTitle: event.target.value,
-    }); //Here we use the spread operator to get all the userInput and then select the the operation on enteredTitle
+    }); //Here we called the setUserInput (Updating function) we use the spread operator to get all the userInput and then select the the operation on enteredTitle
   };
 
   const amountChangeHandler = (event) => {
