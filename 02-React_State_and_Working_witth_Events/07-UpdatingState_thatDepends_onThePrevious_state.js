@@ -5,7 +5,7 @@ import "./ExpenseForm.css";
 const ExpenseForm = () => {
   // const [enteredTitle, setEnteredTitle] = useState("");
   // const [enteredAmount, setEnteredAmount] = useState("");
-  // const [entereDate, setEnteredDate] = useState("");
+  // const [enteredDate, setEnteredDate] = useState("");
 
   //Creating state Object
   const [userInput, setUserInput] = useState({
