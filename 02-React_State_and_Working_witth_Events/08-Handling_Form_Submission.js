@@ -25,7 +25,7 @@ const ExpenseForm = () => {
     //   enteredTitle: event.target.value,
     // });
 
-    //Altenative way for updating state that depends on the previous state
+    //Alternative way for updating state that depends on the previous state
     // setUserInput((prevState) => {
     //   return { ...prevState, enteredTitle: event.target.value };
     // });
