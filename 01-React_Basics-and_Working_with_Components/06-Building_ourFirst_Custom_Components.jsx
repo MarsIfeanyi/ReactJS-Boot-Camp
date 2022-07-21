@@ -14,5 +14,7 @@
  * 2. Export the created component
  * 3. IMport the component in the file where you want to use it so that they are in the JSX code, and you can use it like an HTML element,starting with an uppercase character
  *
- * Hint: App.js is the root components ie its the main component being rendered in the starting file (index.js), thus you don't add it into the components folder
+ * Hint: App.js is the root components ie its the main component being rendered in the starting file (index.js), thus you don't add it into the components folder.
+ *
+ * Hint: Your custom component must start with an uppercase character
  */
