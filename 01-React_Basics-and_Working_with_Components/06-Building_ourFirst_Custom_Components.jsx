@@ -13,4 +13,6 @@
  * 1. Create the component using JS function, returning some HTML codes (it must return a single div ie You MUST have only one root element per return statement or per JSX code snippet)
  * 2. Export the created component
  * 3. IMport the component in the file where you want to use it so that they are in the JSX code, and you can use it like an HTML element,starting with an uppercase character
+ *
+ * Hint: App.js is the root components ie its the main component being rendered in the starting file (index.js), thus you don't add it into the components folder
  */
