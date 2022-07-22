@@ -9,8 +9,8 @@ import React, { useState } from "react"; // {useState} allows us to define value
  * Hint: All hooks must be called inside a react component function, they can not be called outside the component function.
  * Also they should not be called in nested functions. They should be called directly in the component function and then you will assign initial value to it.
  *
- * Hint: useState returns an array where the first value is the variable itself, and the second element is the 'updating function', thus we can use array destructuring to store both elements in separate variables or constants.
- * Hint: For the array destructuring you can choose any name of your choice, it is the order that matters. The first element is a point at the managed value (ie the value at the initial value,props.title) and the second element is a function which we can later call to set a new title...
+ * Hint: useState returns an array where the first value is the variable itself(the current state), and the second element is the 'updating function', thus we can use array destructuring to store both elements in separate variables or constants.
+ * Hint: For the array destructuring you can choose any name of your choice, it is the order that matters. The first element is a point at the managed value (ie the value at the initial value, props.title) and the second element is a function which we can later call to set a new value, title...
  *
  *
  * Hint: Both names are up to you but the convention is to use something which describes the value and then set with the name repeated with capital letter
@@ -31,6 +31,8 @@ import React, { useState } from "react"; // {useState} allows us to define value
  * Thus the initial value is only considered when the component is being executed for the first time, for a given component instance.
  *
  * State adds reactivity to our application.
+ *
+ * Hint: We assign a new value by calling a function
  */
 
 const [title, setTitle] = useState(props.title);
