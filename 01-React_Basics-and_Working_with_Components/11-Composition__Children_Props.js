@@ -8,7 +8,20 @@
  * Hint: You can't just use your custom components like that as wrappers for other components ie having content between the opening and closing tags of that component doesn't just work like that.
  *
  * Props children is a special props which is built into React and every components has it even if you didn't set it explicitly.
- * Hint VIP: Children is a reserved name and the value of the children props will always be the content between the opening and closing tags of your custom component
+ * Hint VIP: Children is a reserved name and the value of the children props will always be the content between the opening and closing tags of your custom component ie the value inside the <Card></Card> wrapper as show in the Example below
+ * 
+ *  return (
+    <>
+      <Card className="expense-item">
+        <ExpenseDate date={props.date}></ExpenseDate>
+
+        <div className="expense-item__description">
+          <h2>{props.title}</h2>
+          <div className="expense-item__price">${props.amount}</div>
+        </div>
+         </Card>
+        </li>
+      );
  *
  * Hint: Whenever you combine components, you are using composition. Composition is very important when working with react and an important part of composition is the 'props.children' feature which allows you to also create wrapper components
  */
