@@ -5,21 +5,22 @@ import "./ExpenseForm.css";
 const ExpenseForm = () => {
   // const [enteredTitle, setEnteredTitle] = useState("");
   // const [enteredAmount, setEnteredAmount] = useState("");
-  // const [entereDate, setEnteredDate] = useState("");
+  // const [enteredDate, setEnteredDate] = useState("");
 
-  //Creating state Object
+  //Creating a state Object
   const [userInput, setUserInput] = useState({
     enteredTitle: "",
     enteredAmount: "",
     enteredDate: "",
-  }); //Note, here the useState accepts an Object as an initial input
+  }); //NOTE: Here the useState accepts an Object as an initial input. Remember objects are key-value pair. here the keys are initialized as empty strings
 
   const titleChangeHandler = (event) => {
     // setEnteredTitle(event.target.value);
     setUserInput({
       ...userInput,
       enteredTitle: event.target.value,
-    }); //Here we called the setUserInput (Updating function) we use the spread operator to get all the userInput and then select the the operation on enteredTitle
+    }); //Here we called the setUserInput (state Updating function) we use the spread operator to get all the userInput and then select the the operation on enteredTitle. We use the spread operator(...userInput) to copy the other values to ensure that they don't get lost when the state updates ie it ensures that the other values are not thrown away.
+    //Hint: You first copy all the key-value pairs into the new object and then overwrite the key-value pair of concern, here it is enteredTitle
   };
 
   const amountChangeHandler = (event) => {
@@ -32,7 +33,6 @@ const ExpenseForm = () => {
 
   const dateChangeHandler = (event) => {
     // setEnteredDate(event.target.value);
-
     setUserInput({
       ...userInput,
       enteredDate: event.target.value,
@@ -76,3 +76,5 @@ const ExpenseForm = () => {
 };
 
 export default ExpenseForm;
+
+//Hint: Generally, this is not a good practice for updating states that depends on the previous state
