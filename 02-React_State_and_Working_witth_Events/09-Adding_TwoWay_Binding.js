@@ -1,7 +1,7 @@
 /**
  * Two way Binding means that for inputs we don't just listen to changes but we can also pass a new value back into the input, so that we can reset or change the input programmatically.
  *
- * Hint: We achieve this in the ExpenseForm by adding the 'value' attribute to the form, so that when we change the state, we also change the input.
+ * Hint: We achieve this in the ExpenseForm by adding the 'value' attribute (props) to the form, so that when we change the state, we also change the input. then will call the state updating function in the 'submitHandler' and pass an empty string.
  *
  * Hint: Two way Binding is very important concept in React especially when you are working with forms because it allows you to gather user input and also change it upon form submission.
  */
@@ -63,7 +63,7 @@ const ExpenseForm = () => {
     }; //Make sure that the property names exist and hold the correct value
     console.log(expenseData);
 
-    //Two way Binding: Clearing the input fields
+    //Two way Binding: Calling the state Updating function, Clearing the input fields
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
@@ -112,3 +112,9 @@ const ExpenseForm = () => {
 };
 
 export default ExpenseForm;
+
+/**
+ * Hint: Steps to achieve Two-Way Binding
+ * 1. Add 'value' prop to the form input fields and set it to current state value
+ * 2. Call the state updating function inside the 'submitHandler' and pass in an empty string.
+ */
