@@ -12,7 +12,7 @@
  * Hint: React will ensure that we get one parameter in every component which we use as a component and that one parameter will be an object which holds all the received attributes as properties, hence the name 'Props'.
  * The props will get access to all the attributes we defined in our custom element (ie the JSX code in the App.js).
  *
- * The props have key-value pairs as well. The keys are the attributes name defined in the custom HTML (JSX Code) inside the App.js file, and the values is the values set in the {}
+ * The props have key-value pairs as well. The keys are the attributes 'name' defined in the custom HTML (JSX Code) inside the App.js file, and the values is the 'values' set in the {}
  * 
  * Example: App.js code
  * const App = () => {
@@ -26,7 +26,7 @@
  Here the key = items and the value = expenses
 
  *
- * Hint: The key you access from your props object has to be the same as the name you used for attribute.
+ * Hint: The key which you access from your props object has to be the same as the name you used/chosed for the attribute.
  *
  * Hint:Choose/use attribute names which are self explanatory and makes sense in the context of what you are working on.
  *
