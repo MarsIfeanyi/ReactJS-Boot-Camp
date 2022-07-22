@@ -32,7 +32,6 @@ const ExpenseForm = () => {
 
   const dateChangeHandler = (event) => {
     // setEnteredDate(event.target.value);
-
     setUserInput({
       ...userInput,
       enteredDate: event.target.value,
@@ -78,7 +77,7 @@ const ExpenseForm = () => {
 export default ExpenseForm;
 
 /**
- * Hint: Whenever you update your state and you depend on the previous state, should not do it like this (as in above) but rather use an alternative form of the state updating function. ie by calling the updating function and pass another function into it. Doing it like this ensures that React gives you the latest state snapshot, keeping all scheduled state updates in mind. This is the safest way to ensure that you operate on the latest state snapshot
+ * Hint: Whenever you update state and you depend on the previous state, then you should not do it like this (as in above) but rather use an alternative form of the state updating function. ie by calling the updating function and pass another function into it. Doing it like this ensures that React gives you the latest state snapshot, keeping all scheduled state updates in mind. This is the safest way to ensure that you operate on the latest state snapshot
  */
 
 //Updating  State that depend on the previous state using arrow function
