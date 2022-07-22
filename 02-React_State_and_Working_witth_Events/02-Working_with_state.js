@@ -32,7 +32,7 @@ import React, { useState } from "react"; // {useState} allows us to define value
  *
  * State adds reactivity to our application.
  *
- * Hint: We assign a new value by calling a function
+ * Hint: We assign a new value by calling a function ie the state Updating function and then just pass the new value as an Argument.
  */
 
 const [title, setTitle] = useState(props.title);
