@@ -1,6 +1,7 @@
 /**
  * Hint: by default whenever you listen to change event for an input it will always be a string.
  *
+ * You can have multiple states per component
  */
 
 import React, { useState } from "react";
@@ -10,18 +11,18 @@ import "./ExpenseForm.css";
 const ExpenseForm = () => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
-  const [entereDate, setEnteredDate] = useState("");
+  const [enteredDate, setEnteredDate] = useState("");
 
   const titleChangeHandler = (event) => {
-    setEnteredTitle(event.target.value);
+    setEnteredTitle(event.target.value); //Sets the Title based on the currently entered value. This function gets triggered whenever the title changes
   };
 
   const amountChangeHandler = (event) => {
-    setEnteredAmount(event.target.value);
+    setEnteredAmount(event.target.value); // This function gets triggered whenever the amount changes
   };
 
   const dateChangeHandler = (event) => {
-    setEnteredDate(event.target.value);
+    setEnteredDate(event.target.value); // gets triggered whenever the date changes
   };
 
   return (
