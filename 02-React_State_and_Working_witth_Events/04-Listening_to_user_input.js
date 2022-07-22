@@ -11,7 +11,7 @@ const ExpenseForm = () => {
     console.log(event.target.value);
   };
 
-  //Hint: event.target.value helps you to get the actual value of the event that was clicked
+  //Hint: event.target.value helps you to get the actual value or the value which was currently entered, when the event occurs for the element you are listening to
 
   return (
     <form>
